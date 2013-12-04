@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 <ul> Great video clips from some older movies
   <li><%= link_to "Friends", "/videos/friends" %></li>
   <li><%= link_to "Gladiator", "/videos/gladiator" %></li>
   <li><%= link_to "Matilda", "/videos/matilda" %></li>
   <li><%= link_to "Seinfeld", "/videos/seinfeld" %></li>
+=======
+<ul> All the videos!
+  <% @videos.each do |video| %>
+    <li><%= link_to video.title, video_path(video.id) %></li>
+  <% end %>
+>>>>>>> e-start
 </ul>

@@ -1,0 +1,14 @@
+<h1>New Video</h1>
+
+<%= form_for @video do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title, :placeholder => "Insert title here" %><br>
+
+	<%= f.label :youtube_id %>
+	<%= f.text_field :youtube_id, :placeholder => "What's the youtube ID?" %><br>
+
+	<%= f.label :description %>
+	<%= f.text_field :description, :placeholder => "Type a sentence about the video" %><br>
+
+	<%= f.submit "Here's my new video!" %>
+<% end %>

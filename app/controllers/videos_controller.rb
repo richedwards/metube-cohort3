@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+<<<<<<< HEAD
   
   def show_all
     
@@ -65,6 +66,35 @@ end
 #       description: 'A great description on where socks really go'
 #     }
 #   end
+=======
+
+  def show
+    id = params[:id]
+    @video = Video.find(id)
+  end
+
+	def new
+		@video = Video.new
+	end
+
+
+  def show_all
+    @videos = Video.all
+  end
+  
+	def create
+		@video = Video.new(video_params)
+		@video.save
+		redirect_to root_path
+	end
+
+	private
+	def video_params
+			params.require(:video).permit(:title, :description, :youtube_id)
+	end
+
+
+>>>>>>> e-start
 
 #   def show_friends
 #     @movie = {

@@ -1,9 +1,19 @@
 MetubeCohort3::Application.routes.draw do
 
+<<<<<<< HEAD
 	root "videos#show_all"
 	get '/videos' => 'videos#show_all', as: 'videos'
 	get "/videos/:video_name" => 'videos#show', as: 'video'
 	
+=======
+	get '/videos/new' => 'videos#new', as: 'new_video'
+	post '/videos' => 'videos#create'
+
+  root 'videos#show_all'
+  get '/videos' => 'videos#show_all'
+  get '/videos/:id' => 'videos#show', as: 'video'
+
+>>>>>>> e-start
 end
 
 
