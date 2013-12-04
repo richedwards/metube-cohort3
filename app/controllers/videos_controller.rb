@@ -1,5 +1,13 @@
 class VideosController < ApplicationController
   
+  def show_all
+    @params = params
+  end
+
+  def show
+    @params = params
+  end
+
   def show_gladiator
     @movie = {
       title: 'Gladiator',
